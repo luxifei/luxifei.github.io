@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div id="post">
+  {{ content }}
+  <p></p>
+  <div id="related">
+    <h3>最近文章</h3>
+    <ul class="posts">
+    {% for post in site.related_posts limit:3 %}
+      <li><span>{{ post.date | date_to_string }}</span> &nbsp;&raquo;&nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+	
+	<a href="/" class="tohome">主页</a>
+	<a href="#" class="totop">顶部</a>
+</div>
+
+
